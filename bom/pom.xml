@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.extra</groupId>
+    <artifactId>extra-bom</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+
+    <properties>
+        <quarkus.version>3.15.1</quarkus.version>
+        <java.version>21</java.version>
+    </properties>
+
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- Quarkus Platform BOM -->
+            <dependency>
+                <groupId>io.quarkus.platform</groupId>
+                <artifactId>quarkus-bom</artifactId>
+                <version>${quarkus.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <!-- Internal platform dependencies -->
+
+            <dependency>
+                <groupId>com.extra</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+</project>
