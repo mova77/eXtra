@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+<modelVersion>4.0.0</modelVersion>
+
+
+<groupId>com.extra</groupId>
+<artifactId>extra-trading-platform</artifactId>
+<version>1.0.0-SNAPSHOT</version>
+
+<packaging>pom</packaging>
+
+
+<modules>
+
+    <module>bom</module>
+
+    <module>common</module>
+    <module>market-data</module>
+    <module>strategy-engine</module>
+    <module>supervisor</module>
+    <module>risk</module>
+    <module>portfolio</module>
+    <module>execution</module>
+    <module>backtesting</module>
+    <module>notification</module>
+
+</modules>
+
+
+<dependencyManagement>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.extra</groupId>
+            <artifactId>extra-bom</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+
+    </dependencies>
+
+</dependencyManagement>
+
+
+<properties>
+
+    <maven.compiler.release>21</maven.compiler.release>
+
+</properties>
+
+
+</project>

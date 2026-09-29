@@ -1,0 +1,15 @@
+services:
+
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: extra
+      POSTGRES_PASSWORD: extra
+      POSTGRES_DB: trading
+
+
+  kafka:
+    image: apache/kafka:latest
+    ports:
+      - "9092:9092"
+
